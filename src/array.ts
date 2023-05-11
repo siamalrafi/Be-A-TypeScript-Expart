@@ -53,8 +53,14 @@ console.log(process1({ name: "stri", age: 4 })); */
 
 function REST(...argu: number[]) {
    console.log(argu);
-   console.log(argu.reduce((a, b) => a + b + 1000));
    return argu.reduce((a, b) => a + b);
 }
 
-console.log(REST(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+console.log(REST(1, 2, 4, 5, 6, 7, 8, 9, 10));
+
+function REST2(...argu: string[]) {
+   console.log(argu);
+   return argu.reduce((a, b) => a + b);
+}
+
+console.log(REST2("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"));
