@@ -1,4 +1,4 @@
-// type Generic<T, R> = { name: T; age: R };
+/* // type Generic<T, R> = { name: T; age: R };
 
 // const x: Generic<string, number> = { name: "ali", age: 444 };
 // const x1: Generic<number, number> = { name:44, age: 444 };
@@ -15,15 +15,45 @@
 // console.log(addNum<boolean, number>(true, 5));
 // console.log(addNum<string, number>("4", 5));
 
-interface ME<T, R, E> {
-   id: T;
-   name: R;
-   age: E;
+// interface ME<T, R, E> {
+//    id: T;
+//    name: R;
+//    age: E;
+//    gender: string;
+// }
+
+// const me: ME<number, string, number> = { id: 55, name: "John", age: 55, gender: "Female" };
+// const me1: ME<number, string, boolean> = { id: 55, name: "John", age: true, gender: "Female" };
+
+// console.log(me);
+// console.log(me1);
+ */
+/* 
+// keyOf in TypeScript --
+
+type TYPE = {
+   name: string;
+   age: number;
    gender: string;
-}
+   id: number;
+};
+type NAME = keyof TYPE;
 
-const me: ME<number, string, number> = { id: 55, name: "John", age: 55, gender: "Female" };
-const me1: ME<number, string, boolean> = { id: 55, name: "John", age: true, gender: "Female" };
+const OBJ = { name: "A", age: 55, gender: "Female" };
 
-console.log(me);
-console.log(me1);
+let N: NAME = "age";
+let N1: NAME = "name";
+
+console.log(OBJ[N], OBJ[N1]);
+console.log(OBJ["age"]); */
+
+// conditionals in TypeScript ---
+
+type GEN = number;
+type GEN1 = GEN extends string ? string : boolean;
+
+type typeA = string;
+type typeB = number;
+type typeC = boolean;
+
+type Main = typeA extends boolean ? number : typeB extends string ? number : typeC extends number ? "number" : undefined;
