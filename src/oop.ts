@@ -54,7 +54,7 @@ class B extends A {
 const b = new B(5535, "name", 52, "male");
 console.log(b.getInfo()); */
 
-// type-guard in typescript ---
+/* // type-guard in typescript ---
 
 /* type A = string | number;
 
@@ -161,4 +161,4 @@ const z: Z = new Z(5, "rani", 23, "female");
 
 console.log(TypeClassChecker<X>(x));
 console.log(TypeClassChecker<Y>(y));
-console.log(TypeClassChecker<Z>(z));
+console.log(TypeClassChecker<Z>(z)); 
