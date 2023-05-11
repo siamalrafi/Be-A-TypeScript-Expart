@@ -47,7 +47,7 @@ let N1: NAME = "name";
 console.log(OBJ[N], OBJ[N1]);
 console.log(OBJ["age"]); */
 
-// conditionals in TypeScript ---
+/* // conditionals in TypeScript ---
 
 type GEN = number;
 type GEN1 = GEN extends string ? string : boolean;
@@ -57,3 +57,29 @@ type typeB = number;
 type typeC = boolean;
 
 type Main = typeA extends boolean ? number : typeB extends string ? number : typeC extends number ? "number" : undefined;
+ */
+
+// conditional map in typescript ---
+
+type STUDENT = {
+   student1: string;
+   student2: string;
+   student3: string;
+   student4: string;
+   student5: string;
+};
+
+// readonly map in typescript ---
+type STUDENTREADONLY = {
+   readonly [key in keyof STUDENT]: STUDENT[key];
+};
+
+const student: STUDENTREADONLY = {
+   student1: "A",
+   student2: "B",
+   student3: "C",
+   student4: "D",
+   student5: "E",
+};
+
+console.log(student);
